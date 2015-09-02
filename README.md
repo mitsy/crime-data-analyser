@@ -4,7 +4,8 @@ spark project
 Steps
 -----
 
-1. The geonames data has to be downloaded from http://download.geonames.org/export/dump/
+1. The geonames data has to be downloaded:
+	wget http://download.geonames.org/export/dump/allCountries.zip
 
 2. Unzip the file allCountries.zip
 
