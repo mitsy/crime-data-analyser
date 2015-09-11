@@ -1,5 +1,5 @@
 # crime-data-analyser
-spark project
+A spark project to analyse newspaper TimesOfIndia data, and extract the locations where crimes like rape and murder are most prominent along with the victim demographics.
 
 Steps
 -----
