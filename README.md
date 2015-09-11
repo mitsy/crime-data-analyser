@@ -7,7 +7,11 @@ Steps
 ```
 	git clone https://github.com/mitsy/crime-data-analyser.git
 ```
-With this, we are in ~/crime-data-analyser directory.
+
+* Change into the below directory:
+```
+	cd crime-data-analyser/
+```
 
 * The geonames data has to be downloaded:
 ```	
@@ -33,4 +37,4 @@ This will create an **output** directory inside crime-data-analyser/ which will 
 
 Note
 ----
-To run a fresh crawler, set the second argument in **processTOIData()** in CrimeDataAnalyser.py to **True**. By default, it is set to **False** as the rape and murder crawled files are already present in this repository.
+To run a fresh crawl, set the second argument in **processTOIData()** in CrimeDataAnalyser.py to **True**. By default, it is set to **False** as the rape and murder crawled files are already present in this repository.
