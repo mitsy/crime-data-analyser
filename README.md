@@ -22,9 +22,4 @@ Steps
 ```
 Note
 ----
-
-<<<<<<< HEAD
-To run a fresh crawler, set the second argument in processTOIData() to True.
-=======
-
 To run a fresh crawler, set the second argument in processTOIData() to True.
