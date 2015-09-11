@@ -101,8 +101,8 @@ def getGeonames(sc,filename,country):
 
 sc = SparkContext()
 
-rapeCityCounts, rapeAgeCounts, rapeAgeGroups = processTOIData(sc, True, "rape_links.tsv", "rape_crawled.txt")
-murderCityCounts, murderAgeCounts, murderAgeGroups = processTOIData(sc, True, "murder_links.tsv", "murder_crawled.txt")
+rapeCityCounts, rapeAgeCounts, rapeAgeGroups = processTOIData(sc, False, "rape_links.tsv", "rape_crawled.txt")
+murderCityCounts, murderAgeCounts, murderAgeGroups = processTOIData(sc, False, "murder_links.tsv", "murder_crawled.txt")
 
 #print rapeCityCounts.collect()
 
@@ -125,8 +125,13 @@ joinedMurderRDD = joinedMurderRDD.map(lambda (city, count, lat, lng): (count, (c
 
 
 
-print "Rape locations: " + str(joinedRapeRDD.collect())
-print "Rape age groups: " + str(rapeAgeGroups.collect())
+#print "Rape locations: " + str(joinedRapeRDD.collect())
+#print "Rape age groups: " + str(rapeAgeGroups.collect())
+#print "Murder locations: " + joinedMurderRDD.collect()
+#print "Murder age groups: " + murderAgeGroups.collect()
 
-print "Murder locations: " + joinedMurderRDD.collect()
-print "Murder age groups: " + murderAgeGroups.collect()
+sc.parallelize(joinedRapeRDD.collect()).saveAsTextFile("output/rapeLocations")
+sc.parallelize(rapeAgeGroups.collect()).saveAsTextFile("output/rapeAgeGroups")
+sc.parallelize(joinedMurderRDD.collect()).saveAsTextFile("output/murderLocations")
+sc.parallelize(murderAgeGroups.collect()).saveAsTextFile("output/murderAgeGroups")
+
