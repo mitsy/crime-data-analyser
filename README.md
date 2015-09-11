@@ -8,7 +8,6 @@ Steps
 	git clone https://github.com/mitsy/crime-data-analyser.git
 ```
 With this, we are in ~/crime-data-analyser directory.
-
 2. The geonames data has to be downloaded:
 ```	
 	wget http://download.geonames.org/export/dump/allCountries.zip
