@@ -34,3 +34,6 @@ This will create an **output** directory inside crime-data-analyser/ which will 
 Note
 ----
 To run a fresh crawler, set the second argument in **processTOIData()** in CrimeDataAnalyser.py to **True**. By default, it is set to **False** as the rape and murder crawled files are already present in this repository.
+1. Item 1
+2. Item 2
+3. Item 3
